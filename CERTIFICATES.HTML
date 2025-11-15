@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Certificates — Lakshay Bharti</title>
+  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <nav class="topbar">
+    <a class="logo" href="index.html">LAKSHAY • BHARTI</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Education / Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a class="active" href="certificates.html">Certificates</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="content page-certificates">
+    <h1>Certificates & Achievements</h1>
+    <p class="muted">A testament to my continuous learning in programming, Python development, data analytics, and AI-driven problem solving.</p>
+
+    <div class="cert-grid">
+      <div class="cert-card" onclick="openModal('CERTIFICATE1.jpg')">
+        <img src="CERTIFICATE1.jpg" alt="Certificate 1" />
+        <h3>Python Programming — Kaggle</h3>
+        <div class="cert-meta"><strong>Date:</strong> October 27, 2025</div>
+        <p class="muted">Rigorous training in Python fundamentals, data manipulations, control flows and scripting best practices.</p>
+      </div>
+
+      <div class="cert-card" onclick="openModal('CERTIFICATE2.png')">
+        <img src="CERTIFICATE2.png" alt="Certificate 2" />
+        <h3>Intro to Programming — Kaggle</h3>
+        <div class="cert-meta"><strong>Date:</strong> October 26, 2025</div>
+        <p class="muted">Foundational concepts in algorithmic thinking, logic building, debugging and clean code principles.</p>
+      </div>
+
+      <div class="cert-card" onclick="openPDF()">
+        <h3>GenAI-Powered Data Analytics — Forage</h3>
+        <div class="cert-meta"><strong>Date:</strong> August 15, 2025</div>
+        <p class="muted">Industry-aligned simulation covering exploratory data analysis, predictive modeling, and business reporting. Click to view PDF.</p>
+        <p style="color:var(--accent);font-weight:700;margin-top:6px;">View Certificate (PDF)</p>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="modal" class="modal" onclick="closeModal()"><div class="modal-content" id="modal-content"></div></div>
+
+  <script>
+    function openModal(src){
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('modal-content');
+      content.innerHTML = `<img src="${src}" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:0 auto;">`;
+      modal.style.display = 'flex';
+    }
+    function openPDF(){
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('modal-content');
+      content.innerHTML = `<iframe src="CERTIFICATE3.pdf" style="width:90vw;height:80vh;border-radius:8px;border:0;"></iframe>`;
+      modal.style.display = 'flex';
+    }
+    function closeModal(){ document.getElementById('modal').style.display='none'; document.getElementById('modal-content').innerHTML=''; }
+  </script>
+
+  <footer class="site-footer">
+    <div>© 2025 Lakshay Bharti</div>
+  </footer>
+</body>
+</html>
